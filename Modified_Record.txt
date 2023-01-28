@@ -1,0 +1,7 @@
+增加word输出格式 bookdown::word_document2
+修改页边距 \geometry{a4paper,left=1.25in,right=1.25in,top=1in,bottom=1in}
+修改文献引用格式 gb7714-2015
+开启缩进 indent: true
+文档类用ctexart，不再调用ctex宏包
+修改页眉页脚格式 \pagestyle{plain}
+修改section的标题样式 第x章

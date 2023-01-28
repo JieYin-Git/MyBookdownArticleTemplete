@@ -1,0 +1,17 @@
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: biblatex
+  keep_tex: yes
+  toc_depth: 3
+  links-as-notes: true
+bookdown::epub_book: default
+bookdown::word_document2:
+  toc: true
+bookdown::gitbook:
+  includes:
+    in_header: _header.html
+  config:
+    download: ["pdf"]
+  split_by: "none"

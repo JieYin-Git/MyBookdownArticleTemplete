@@ -1,0 +1,48 @@
+% \usepackage[heading = true]{ctex}
+
+% \usepackage{xltxtra} % XeLaTeX的一些额外符号
+% 设置中文字体
+% \setCJKmainfont[BoldFont={黑体},ItalicFont={楷体}]{新宋体}
+
+% 设置边距
+\usepackage{geometry}
+\geometry{a4paper,left=1.25in,right=1.25in,top=1in,bottom=1in}
+
+
+\usepackage{amsthm,mathrsfs}
+\usepackage{booktabs}
+\usepackage{longtable}
+% 不要用bm宏包，可能与内部其他宏包冲突
+
+\theoremstyle{plain} 		     % 粗体标签、斜体内容
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}{引理}[section]
+\newtheorem{corollary}{推论}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{conjecture}{推测}[section]
+
+\theoremstyle{definition} 		 % 粗体标签、正体内容
+\newtheorem{definition}{定义}[section]
+\newtheorem{example}{例子}[section]
+\newtheorem{exercise}{练习}[section]
+\newtheorem{hypothesis}{假设}[section]
+
+\theoremstyle{remark} 			 % 斜体标签、正体内容
+\newtheorem*{remark}{注}
+\newtheorem*{solution}{解}
+
+
+\ctexset{
+	section/name = {第,章},
+	section/number = {\chinese{section}},
+	appendix/name = {附录,}
+}
+
+\pagestyle{plain}
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
